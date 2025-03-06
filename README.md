@@ -4,6 +4,9 @@
 
 A modern healthcare AI assistant with real-time RAG (Retrieval-Augmented Generation) capabilities, powered by Mistral-7B.
 
+For Live Demo:
+[https://medicalchatbot](https://medicalragchatbot.netlify.app/)
+
 
 ## ✨ Features
 
