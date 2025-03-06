@@ -4,7 +4,6 @@
 
 A modern healthcare AI assistant with real-time RAG (Retrieval-Augmented Generation) capabilities, powered by Mistral-7B.
 
-![MedicalRAG Demo](https://via.placeholder.com/1000x400?text=MedicalRAG+Demo)
 
 ## ✨ Features
 
@@ -18,27 +17,7 @@ A modern healthcare AI assistant with real-time RAG (Retrieval-Augmented Generat
 
 MedicalRAG uses a sophisticated architecture that combines AI with efficient vector search:
 
-<antArtifact identifier="workflow-diagram" type="application/vnd.ant.mermaid" title="MedicalRAG Workflow Diagram">
-flowchart TD
-    A[User Query] --> B[React Frontend]
-    B --> C[FastAPI Backend]
-    C --> D{Process Query}
-    D --> E[Generate Embeddings]
-    D --> F[Access Medical Knowledge Base]
-    E --> G[FAISS Vector Search]
-    F --> G
-    G --> H[Retrieve Relevant Context]
-    H --> I[Mistral-7B LLM]
-    I --> J[Generate Response]
-    J --> C
-    C --> B
-    B --> K[Display Response to User]
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style I fill:#fbf,stroke:#333,stroke-width:2px
-    style K fill:#f9f,stroke:#333,stroke-width:2px
+![Project-Flowchart](flowchart.jpg)
 
 
 1. **User Input** - The user submits a healthcare question through the React frontend
