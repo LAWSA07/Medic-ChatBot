@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import React, { useState } from "react";
+import { Send } from "lucide-react";
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
@@ -7,30 +7,33 @@ interface ChatInputProps {
 }
 
 const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading }) => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (message.trim() && !isLoading) {
       onSendMessage(message);
-      setMessage('');
+      setMessage("");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center border-t border-gray-200 p-4">
+    <form
+      onSubmit={handleSubmit}
+      className="flex items-center border-t border-green-200 p-4 bg-green-100"
+    >
       <input
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Type your health question here..."
-        className="flex-1 border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex-1 border border-green-300 rounded-l-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
         disabled={isLoading}
       />
       <button
         type="submit"
-        className={`bg-blue-500 text-white p-2 rounded-r-lg ${
-          isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+        className={`bg-green-600 text-white p-2 rounded-r-lg ${
+          isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-green-700"
         }`}
         disabled={isLoading}
       >
